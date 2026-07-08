@@ -1,0 +1,21 @@
+{
+    "name":  "ayurveda-hero-next",
+    "version":  "1.0.0",
+    "private":  true,
+    "scripts":  {
+                    "dev":  "next dev -H 0.0.0.0 -p 3000",
+                    "start":  "next dev -H 0.0.0.0 -p 3000",
+                    "build":  "next build",
+                    "predev":  "node scripts/free-port.js 3000",
+                    "prestart":  "node scripts/free-port.js 3000"
+                },
+    "dependencies":  {
+                         "lucide-react":  "latest",
+                         "next":  "latest",
+                         "react":  "latest",
+                         "react-dom":  "latest"
+                     },
+    "devDependencies":  {
+
+                        }
+}
