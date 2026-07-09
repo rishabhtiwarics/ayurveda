@@ -37,7 +37,7 @@ export default function HeroSection() {
           <div
             className={`hero-slide-bg${index === activeSlide ? ' active' : ''}`}
             key={item.title}
-            style={{ backgroundImage: `linear-gradient(180deg, rgba(6,15,4,0.34) 0%, rgba(6,15,4,0.22) 40%, rgba(6,15,4,0.54) 100%), url('${item.image}')` }}
+            style={{ backgroundImage: `linear-gradient(0deg, rgb(6 15 4) 0%, rgb(6 15 4 / 37%) 24%, rgba(6, 15, 4, 0.16) 48%, rgba(6, 15, 4, 0) 72%), url('${item.image}')` }}
           />
         ))}
       </div>
@@ -65,18 +65,6 @@ export default function HeroSection() {
         <button type="button" aria-label="Previous slide" onClick={() => goToSlide(activeSlide - 1)}>
           <ChevronLeft aria-hidden="true" />
         </button>
-        <div className="hero-pagination" aria-label="Hero slider pagination">
-          {slides.map((item, index) => (
-            <button
-              type="button"
-              aria-label={`Go to ${item.title}`}
-              aria-current={index === activeSlide}
-              className={index === activeSlide ? 'active' : ''}
-              key={item.title}
-              onClick={() => goToSlide(index)}
-            />
-          ))}
-        </div>
         <button type="button" aria-label="Next slide" onClick={() => goToSlide(activeSlide + 1)}>
           <ChevronRight aria-hidden="true" />
         </button>
