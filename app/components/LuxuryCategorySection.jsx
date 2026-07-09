@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Leaf } from 'lucide-react';
 
 const categories = [
   {
@@ -13,10 +13,6 @@ const categories = [
     title: 'Body Care',
     image: '/images/herobnner1.png',
   },
-  {
-    title: 'Daily Rituals',
-    image: '/images/herobnner2.png',
-  },
 ];
 
 export default function LuxuryCategorySection() {
@@ -24,9 +20,9 @@ export default function LuxuryCategorySection() {
     <section className="luxury-category-section" aria-label="Ayurvedic care categories">
       <div className="luxury-category-grid">
         <article className="luxury-category-promise">
-          <img className="luxury-category-leaf" src="/images/leaf.png" alt="" aria-hidden="true" />
+          <img className="luxury-category-leaf" src="/images/leftleaf.png" alt="" aria-hidden="true" />
           <div className="luxury-category-promise-content">
-            <span className="luxury-category-kicker">Our Promise</span>
+            <span className="luxury-category-kicker"><Leaf aria-hidden="true" /><span>Our Promise</span></span>
             <h2>Nature is our luxury.</h2>
             <p>Pure botanical care blended with Ayurvedic science for visible, lasting wellness.</p>
             <a href="#" aria-label="Learn more about AyurVeda promise">Learn More <ArrowRight aria-hidden="true" /></a>
