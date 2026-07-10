@@ -19,10 +19,11 @@ export default function HomePage() {
         <BestSellersSection />
         <StoryVideoSection />
         <ProductShowcaseSection />
-       {/* <InstagramSection /> */}
-  <FooterSection />
+        <InstagramSection />
+        <FooterSection />
       </main>
      
     </>
   );
 }
+

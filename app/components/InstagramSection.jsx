@@ -1,73 +1,72 @@
-import { Instagram, ArrowRight } from 'lucide-react';
+import { ArrowUpRight, Camera } from 'lucide-react';
 
-const col1 = ['/images/herobnner1.png', '/images/product1.png'];
-const col2 = ['/images/herobnner2.png', '/images/product2.png', '/images/herobnner1.png', '/images/product1.png'];
-const col3 = ['/images/product2.png', '/images/herobnner1.png'];
-const col4 = ['/images/product1.png', '/images/herobnner2.png', '/images/product2.png', '/images/herobnner1.png'];
-const col5 = ['/images/herobnner2.png', '/images/product1.png'];
+const galleryItems = [
+  { title: 'Ayurveda Ritual', image: '/images/herobnner1.png' },
+  { title: 'Herbal Wellness', image: '/images/herobnner2.png' },
+];
+
+const loopItems = Array.from({ length: 8 }, () => galleryItems).flat();
+const topRow = loopItems;
+const bottomGalleryItems = galleryItems.slice().reverse();
+const bottomRow = Array.from({ length: 8 }, () => bottomGalleryItems).flat();
+
+function InstagramBadge() {
+  return (
+    <span className="instagram-tile-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" focusable="false">
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="1" />
+      </svg>
+    </span>
+  );
+}
 
 export default function InstagramSection() {
   return (
-    <section className="instagram-section" aria-label="Follow us on Instagram">
-      <div className="instagram-header">
-        <span className="instagram-kicker">
-          {/* <Instagram aria-hidden="true" /> */}
-          <span>Follow Us</span>
-        </span>
-        <h2>@ayurveda on Instagram</h2>
-        <p>Real rituals, real skin — tag us to be featured.</p>
-        <a href="#" aria-label="Follow AyurVeda on Instagram">
-          Follow Us <ArrowRight aria-hidden="true" />
+    <section className="instagram-section sf-white" aria-label="Follow Ayurveda on Instagram">
+      <div className="instagram-follow-panel">
+        <div className="instagram-follow-copy">
+          <span className="instagram-kicker">
+            <Camera aria-hidden="true" />
+            Follow us
+          </span>
+          <h2>Ayurveda moments, fresh from Instagram</h2>
+        </div>
+        <a className="instagram-follow-link" href="#" aria-label="Follow us on Instagram">
+          @ayurveda
+          <ArrowUpRight aria-hidden="true" />
         </a>
       </div>
 
-      <div className="instagram-grid">
-        <div className="instagram-col instagram-col-static">
-          {col1.map((src, i) => (
-            <a className="instagram-tile" href="#" key={`c1-${i}`}>
-              <img src={src} alt="" />
-              {/* <span className="instagram-tile-icon"><Instagram aria-hidden="true" /></span> */}
-            </a>
+      <div className="instagram-marquee" aria-hidden="true">
+        <div className="instagram-marquee-track">
+          {[0, 1].map((groupIndex) => (
+            <div className="instagram-marquee-group" key={`top-group-${groupIndex}`}>
+              {topRow.map((item, index) => (
+                <div className="instagram-tile" key={`${item.title}-top-${groupIndex}-${index}`}>
+                  <img src={item.image} alt="" />
+                  <span className="instagram-tile-overlay" />
+                  <InstagramBadge />
+                </div>
+              ))}
+            </div>
           ))}
         </div>
+      </div>
 
-        <div className="instagram-col instagram-col-scroll">
-          <div className="instagram-col-track">
-            {[...col2, ...col2].map((src, i) => (
-              <a className="instagram-tile" href="#" key={`c2-${i}`} aria-hidden={i >= col2.length}>
-                <img src={src} alt="" />
-                {/* <span className="instagram-tile-icon"><Instagram aria-hidden="true" /></span> */}
-              </a>
-            ))}
-          </div>
-        </div>
-
-        <div className="instagram-col instagram-col-static">
-          {col3.map((src, i) => (
-            <a className="instagram-tile" href="#" key={`c3-${i}`}>
-              <img src={src} alt="" />
-              {/* <span className="instagram-tile-icon"><Instagram aria-hidden="true" /></span> */}
-            </a>
-          ))}
-        </div>
-
-        <div className="instagram-col instagram-col-scroll instagram-col-scroll-alt">
-          <div className="instagram-col-track">
-            {[...col4, ...col4].map((src, i) => (
-              <a className="instagram-tile" href="#" key={`c4-${i}`} aria-hidden={i >= col4.length}>
-                <img src={src} alt="" />
-                {/* <span className="instagram-tile-icon"><Instagram aria-hidden="true" /></span> */}
-              </a>
-            ))}
-          </div>
-        </div>
-
-        <div className="instagram-col instagram-col-static">
-          {col5.map((src, i) => (
-            <a className="instagram-tile" href="#" key={`c5-${i}`}>
-              <img src={src} alt="" />
-              {/* <span className="instagram-tile-icon"><Instagram aria-hidden="true" /></span> */}
-            </a>
+      <div className="instagram-marquee instagram-marquee-reverse" aria-hidden="true">
+        <div className="instagram-marquee-track">
+          {[0, 1].map((groupIndex) => (
+            <div className="instagram-marquee-group" key={`bottom-group-${groupIndex}`}>
+              {bottomRow.map((item, index) => (
+                <div className="instagram-tile" key={`${item.title}-bottom-${groupIndex}-${index}`}>
+                  <img src={item.image} alt="" />
+                  <span className="instagram-tile-overlay" />
+                  <InstagramBadge />
+                </div>
+              ))}
+            </div>
           ))}
         </div>
       </div>
