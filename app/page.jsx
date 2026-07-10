@@ -6,7 +6,7 @@ import BestSellersSection from './components/BestSellersSection';
 import StoryVideoSection from './components/StoryVideoSection';
 import ProductShowcaseSection from './components/ProductShowcaseSection';
 import FooterSection from './components/FooterSection';
-
+import InstagramSection from './components/InstagramSection';
 
 export default function HomePage() {
   return (
@@ -19,7 +19,7 @@ export default function HomePage() {
         <BestSellersSection />
         <StoryVideoSection />
         <ProductShowcaseSection />
-       
+       {/* <InstagramSection /> */}
   <FooterSection />
       </main>
      
