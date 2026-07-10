@@ -5007,7 +5007,7 @@ body{
 }
 
 /* Desktop app width cap: do not stretch beyond 1280px */
-@media (min-width:1281px){
+@media (min-width:1024px){
   .site-header,
   main{
     width:100% !important;
@@ -5963,3 +5963,480 @@ body{
 
 
 
+
+/* Product Showcase requested 70/30 layout lock */
+@media (min-width:1024px){
+  .product-showcase-layout{
+    grid-template-columns:minmax(0, 70%) minmax(300px, 30%) !important;
+  }
+
+  .product-showcase-layout .product-showcase-viewport{
+    width:100% !important;
+    min-width:0 !important;
+  }
+
+  .product-showcase-layout .product-ayurveda-panel{
+    width:100% !important;
+  }
+}
+
+
+/* Product Ayurveda panel matched to luxury promise */
+@media (min-width:1024px){
+  .product-showcase-layout .product-ayurveda-panel{
+    justify-content:center !important;
+    padding:30px 34px !important;
+  }
+
+  .product-showcase-layout .product-ayurveda-content{
+    max-width:300px !important;
+    gap:0 !important;
+  }
+
+  .product-showcase-layout .product-ayurveda-kicker{
+    gap:6px !important;
+    margin-bottom:12px !important;
+    padding:5px 12px !important;
+    font-size:11.5px !important;
+  }
+
+  .product-showcase-layout .product-ayurveda-content h3{
+    max-width:260px !important;
+    margin-bottom:12px !important;
+    font-size:32px !important;
+    line-height:1.12 !important;
+    font-weight:600 !important;
+  }
+
+  .product-showcase-layout .product-ayurveda-content p{
+    max-width:300px !important;
+    margin-bottom:18px !important;
+    color:rgba(255,255,255,0.82) !important;
+    font-size:12.5px !important;
+    font-weight:500 !important;
+    line-height:1.5 !important;
+  }
+
+  .product-showcase-layout .product-ayurveda-content a{
+    gap:6px !important;
+    min-height:auto !important;
+    padding:10px 16px !important;
+    font-size:10.5px !important;
+    line-height:1 !important;
+  }
+
+  .product-showcase-layout .product-ayurveda-content a svg{
+    width:12px !important;
+    height:12px !important;
+    stroke-width:2.2 !important;
+  }
+}
+
+/* Product Ayurveda leaf smaller */
+.product-ayurveda-leaf{
+  width:62% !important;
+  max-width:220px !important;
+}
+
+@media (max-width:1280px){
+  .product-ayurveda-leaf{
+    width:210px !important;
+    max-width:58% !important;
+  }
+}
+
+@media (max-width:640px){
+  .product-ayurveda-leaf{
+    width:220px !important;
+    max-width:68% !important;
+  }
+}
+
+/* Product Showcase compact polish for 1024-1280 */
+@media (min-width:1024px) and (max-width:1280px){
+  .product-showcase-layout{
+    gap:14px !important;
+  }
+
+  .product-showcase-layout .product-showcase-product,
+  .product-showcase-product{
+    grid-template-columns:minmax(0, 0.95fr) minmax(280px, 0.85fr) !important;
+    gap:20px !important;
+  }
+
+  .product-gallery-stage{
+    min-height:400px !important;
+    height:400px !important;
+    padding-bottom:72px !important;
+  }
+
+  .product-gallery-stage > img{
+    width:min(72%, 430px) !important;
+    max-height:270px !important;
+  }
+
+  .product-gallery-stage .product-gallery-thumbs{
+    bottom:14px !important;
+    gap:8px !important;
+    padding:7px !important;
+  }
+
+  .product-gallery-stage .product-gallery-thumb{
+    width:54px !important;
+    height:54px !important;
+    flex-basis:54px !important;
+  }
+
+  .product-detail-panel h2{
+    font-size:28px !important;
+    line-height:1.06 !important;
+    margin-bottom:8px !important;
+  }
+
+  .product-detail-subtitle,
+  .product-rating,
+  .product-price-row{
+    margin-bottom:8px !important;
+  }
+
+  .product-detail-subtitle,
+  .product-shipping-note{
+    font-size:12px !important;
+    line-height:1.45 !important;
+  }
+
+  .product-options,
+  .product-quantity{
+    margin-top:10px !important;
+    gap:7px !important;
+  }
+
+  .product-options button{
+    min-height:24px !important;
+    padding:0 10px !important;
+    font-size:9.5px !important;
+  }
+
+  .product-action-row .product-add-cart,
+  .product-add-cart{
+    min-height:44px !important;
+    font-size:11px !important;
+  }
+
+  .product-action-row .product-showcase-pagination button{
+    width:44px !important;
+    height:44px !important;
+    flex-basis:44px !important;
+  }
+
+  .product-feature-badges{
+    margin-top:14px !important;
+    padding-top:12px !important;
+  }
+
+  .product-feature-badge svg{
+    width:22px !important;
+    height:22px !important;
+  }
+
+  .product-feature-badge span{
+    font-size:9.5px !important;
+  }
+
+  .product-showcase-layout .product-ayurveda-panel,
+  .product-ayurveda-panel{
+    min-height:400px !important;
+    height:400px !important;
+    padding:26px 28px !important;
+  }
+
+  .product-showcase-layout .product-ayurveda-content h3{
+    font-size:28px !important;
+    max-width:235px !important;
+    margin-bottom:10px !important;
+  }
+
+  .product-showcase-layout .product-ayurveda-content p{
+    max-width:250px !important;
+    margin-bottom:16px !important;
+  }
+
+  .product-ayurveda-leaf{
+    right:-28px !important;
+    bottom:-26px !important;
+    width:180px !important;
+    max-width:58% !important;
+  }
+}
+
+.product-gallery-more{
+  color:var(--green-dark) !important;
+  background:#fff !important;
+  font-size:13px !important;
+  font-weight:800 !important;
+  line-height:1 !important;
+}
+
+.product-gallery-more:hover{
+  color:#fff !important;
+  background:var(--green) !important;
+  border-color:var(--green) !important;
+}
+
+/* Product showcase product one-row tablet */
+@media (min-width:768px) and (max-width:1023px){
+  .product-showcase-layout .product-showcase-product,
+  .product-showcase-product{
+    grid-template-columns:minmax(0, 1fr) minmax(250px, 0.82fr) !important;
+    gap:16px !important;
+    align-items:start !important;
+  }
+
+  .product-gallery-stage{
+    min-height:360px !important;
+    height:360px !important;
+    padding-bottom:70px !important;
+  }
+
+  .product-gallery-stage > img{
+    width:min(74%, 360px) !important;
+    max-height:245px !important;
+  }
+
+  .product-detail-panel h2{
+    font-size:26px !important;
+  }
+}
+
+/* Hide product feature badges on tablet */
+@media (min-width:768px) and (max-width:1023px){
+  .product-feature-badges{
+    display:none !important;
+  }
+}
+
+/* Product showcase tablet UI polish 768-1023 */
+@media (min-width:768px) and (max-width:1023px){
+  .product-showcase-section{
+    padding-bottom:34px !important;
+  }
+
+  .product-showcase-wrap{
+    max-width:860px !important;
+  }
+
+  .product-showcase-layout{
+    gap:14px !important;
+  }
+
+  .product-showcase-layout .product-showcase-product,
+  .product-showcase-product{
+    grid-template-columns:minmax(0, 52%) minmax(300px, 48%) !important;
+    gap:16px !important;
+    align-items:start !important;
+  }
+
+  .product-gallery-stage{
+    min-height:330px !important;
+    height:330px !important;
+    padding-bottom:66px !important;
+    border-radius:10px 10px 10px 0 !important;
+  }
+
+  .product-gallery-stage > img{
+    width:min(70%, 330px) !important;
+    max-height:215px !important;
+    filter:drop-shadow(0 18px 20px rgba(43,54,37,0.12)) !important;
+  }
+
+  .product-gallery-stage .product-gallery-thumbs{
+    bottom:12px !important;
+    gap:7px !important;
+    padding:7px !important;
+    max-width:calc(100% - 28px) !important;
+  }
+
+  .product-gallery-stage .product-gallery-thumb{
+    width:52px !important;
+    height:52px !important;
+    flex-basis:52px !important;
+  }
+
+  .product-gallery-more{
+    font-size:12px !important;
+  }
+
+  .product-detail-panel{
+    padding-top:0 !important;
+  }
+
+  .product-detail-panel h2{
+    max-width:330px !important;
+    margin-bottom:8px !important;
+    font-size:24px !important;
+    line-height:1.08 !important;
+  }
+
+  .product-detail-subtitle{
+    max-width:320px !important;
+    margin-bottom:8px !important;
+    font-size:12px !important;
+    line-height:1.45 !important;
+  }
+
+  .product-rating,
+  .product-price-row{
+    margin-bottom:8px !important;
+  }
+
+  .product-shipping-note{
+    font-size:11px !important;
+  }
+
+  .product-options,
+  .product-quantity{
+    gap:7px !important;
+    margin-top:10px !important;
+  }
+
+  .product-options > span,
+  .product-quantity > span{
+    font-size:11px !important;
+  }
+
+  .product-options button{
+    min-height:24px !important;
+    padding:0 10px !important;
+    font-size:9.5px !important;
+  }
+
+  .product-quantity button{
+    width:23px !important;
+    height:23px !important;
+  }
+
+  .product-action-row{
+    grid-template-columns:minmax(0, 1fr) auto !important;
+    gap:8px !important;
+    margin-top:12px !important;
+  }
+
+  .product-action-row .product-add-cart,
+  .product-add-cart{
+    min-height:42px !important;
+    font-size:10.5px !important;
+  }
+
+  .product-action-row .product-showcase-pagination button{
+    width:42px !important;
+    height:42px !important;
+    flex-basis:42px !important;
+  }
+
+  .product-ayurveda-panel{
+    min-height:260px !important;
+    height:auto !important;
+  }
+}
+
+/* Product Ayurveda typography matched to luxury promise all breakpoints */
+.product-ayurveda-kicker{
+  font-weight:600 !important;
+  letter-spacing:.3px !important;
+  text-transform:none !important;
+}
+
+.product-ayurveda-content h3{
+  font-weight:600 !important;
+  line-height:1.12 !important;
+}
+
+.product-ayurveda-content p{
+  color:rgba(255,255,255,0.82) !important;
+  font-size:13px !important;
+  font-weight:400 !important;
+  line-height:1.6 !important;
+}
+
+.product-ayurveda-content a{
+  font-size:10px !important;
+  font-weight:800 !important;
+  letter-spacing:.4px !important;
+  text-transform:uppercase !important;
+}
+
+@media (max-width:1280px){
+  .product-ayurveda-content h3{
+    font-size:28px !important;
+  }
+
+  .product-ayurveda-content p{
+    font-size:12px !important;
+  }
+
+  .product-ayurveda-kicker{
+    font-size:11px !important;
+  }
+}
+
+@media (max-width:1023px){
+  .product-ayurveda-content h3{
+    font-size:26px !important;
+  }
+
+  .product-ayurveda-content p{
+    font-size:11.5px !important;
+  }
+
+  .product-ayurveda-content a{
+    font-size:10px !important;
+  }
+}
+
+@media (max-width:640px){
+  .product-ayurveda-content h3{
+    font-size:23px !important;
+  }
+
+  .product-ayurveda-content p{
+    font-size:11px !important;
+  }
+}
+
+/* Product Ayurveda leaf smaller below 1024 */
+@media (max-width:1023px){
+  .product-ayurveda-leaf{
+    width:150px !important;
+    max-width:48% !important;
+    right:-22px !important;
+    bottom:-22px !important;
+  }
+}
+
+@media (max-width:640px){
+  .product-ayurveda-leaf{
+    width:170px !important;
+    max-width:58% !important;
+  }
+}
+
+/* Product Ayurveda text center below 1024 */
+@media (max-width:1023px){
+  .product-ayurveda-panel{
+    justify-content:center !important;
+    text-align:center !important;
+  }
+
+  .product-ayurveda-content{
+    align-items:center !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    text-align:center !important;
+  }
+
+  .product-ayurveda-content h3,
+  .product-ayurveda-content p{
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+}

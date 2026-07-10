@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ArrowRight, ChevronLeft, ChevronRight, Droplets, Leaf, Minus, Plus, ShoppingCart, Sparkles, Star } from 'lucide-react';
 
 const galleryImages = [
@@ -33,6 +33,22 @@ export default function ProductShowcaseSection() {
   const [quantity, setQuantity] = useState(1);
   const [activeSlide, setActiveSlide] = useState(0);
 
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveImage((current) => (current + 1) % galleryImages.length);
+    }, 3200);
+
+    return () => window.clearInterval(timer);
+  }, []);
+
+  const visibleGalleryThumbs = [
+    { ...galleryImages[activeImage], imageIndex: activeImage },
+    ...galleryImages
+      .map((image, imageIndex) => ({ ...image, imageIndex }))
+      .filter((image) => image.imageIndex !== activeImage),
+  ].slice(0, 2);
+  const hiddenGalleryCount = Math.max(0, galleryImages.length - visibleGalleryThumbs.length);
+
   const nextSlide = () => setActiveSlide((current) => (current + 1) % showcaseProducts.length);
   const previousSlide = () => setActiveSlide((current) => (current - 1 + showcaseProducts.length) % showcaseProducts.length);
 
@@ -50,18 +66,28 @@ export default function ProductShowcaseSection() {
                         <img src={galleryImages[activeImage].src} alt={galleryImages[activeImage].alt} />
 
                         <div className="product-gallery-thumbs">
-                          {galleryImages.map((image, index) => (
+                          {visibleGalleryThumbs.map((image, index) => (
                             <button
-                              className={`product-gallery-thumb ${activeImage === index ? 'active' : ''}`}
+                              className={`product-gallery-thumb ${activeImage === image.imageIndex ? 'active' : ''}`}
                               type="button"
-                              aria-label={`View product image ${index + 1}`}
-                              aria-current={activeImage === index}
-                              key={`${image.src}-${index}`}
-                              onClick={() => setActiveImage(index)}
+                              aria-label={`View product image ${image.imageIndex + 1}`}
+                              aria-current={activeImage === image.imageIndex}
+                              key={`${image.src}-${image.alt}-${index}`}
+                              onClick={() => setActiveImage(image.imageIndex)}
                             >
                               <img src={image.src} alt="" aria-hidden="true" />
                             </button>
                           ))}
+                          {hiddenGalleryCount > 0 && (
+                            <button
+                              className="product-gallery-thumb product-gallery-more"
+                              type="button"
+                              aria-label={`View ${hiddenGalleryCount} more product images`}
+                              onClick={() => setActiveImage((current) => (current + 1) % galleryImages.length)}
+                            >
+                              +{hiddenGalleryCount}
+                            </button>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -89,7 +115,6 @@ export default function ProductShowcaseSection() {
                         <span>Size:</span>
                         <button type="button">Travel (15ml)</button>
                         <button className="active" type="button">Full (50ml)</button>
-                        <button type="button">Value (100ml)</button>
                       </div>
 
                       <div className="product-quantity" aria-label="Choose quantity">
@@ -159,5 +184,4 @@ export default function ProductShowcaseSection() {
     </section>
   );
 }
-
 
