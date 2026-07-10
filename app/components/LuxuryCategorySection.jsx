@@ -29,15 +29,17 @@ export default function LuxuryCategorySection() {
           </div>
         </article>
 
-        {categories.map((category) => (
-          <a className="luxury-category-card" href="#" key={category.title}>
-            <span className="luxury-category-image" style={{ backgroundImage: `url('${category.image}')` }} />
-            <span className="luxury-category-content">
-              <strong>{category.title}</strong>
-              <span>Shop Now <ArrowRight aria-hidden="true" /></span>
-            </span>
-          </a>
-        ))}
+        <div className="luxury-category-cards-track">
+          {[...categories, ...categories].map((category, index) => (
+            <a className="luxury-category-card" href="#" key={`${category.title}-${index}`} aria-hidden={index >= categories.length}>
+              <span className="luxury-category-image" style={{ backgroundImage: `url('${category.image}')` }} />
+              <span className="luxury-category-content">
+                <strong>{category.title}</strong>
+                <span>Shop Now <ArrowRight aria-hidden="true" /></span>
+              </span>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { AtSign, Leaf, Mail, Phone, Search, ShoppingCart, User, X } from 'lucide-react';
+import { Leaf, Mail, Menu, Phone, Search, ShoppingCart, User, X } from 'lucide-react';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -23,7 +23,6 @@ export default function Header() {
           <div className="announcement-socials" aria-label="Contact links">
             <a href="tel:+919876543210" aria-label="Call +91 98765 43210"><Phone aria-hidden="true" /><span>+91 98765 43210</span></a>
             <a href="mailto:care@ayurveda.com" aria-label="Email care@ayurveda.com"><Mail aria-hidden="true" /><span>care@ayurveda.com</span></a>
-            
           </div>
           <button
             type="button"
@@ -52,8 +51,13 @@ export default function Header() {
           <button type="button" aria-label="Search"><Search aria-hidden="true" /></button>
           <button type="button" aria-label="Cart"><ShoppingCart aria-hidden="true" /></button>
           <button type="button" aria-label="Account"><User aria-hidden="true" /></button>
+          <button type="button" className="header-menu-button" aria-label="Open menu"><Menu aria-hidden="true" /></button>
         </div>
       </div>
     </header>
   );
 }
+
+
+
+

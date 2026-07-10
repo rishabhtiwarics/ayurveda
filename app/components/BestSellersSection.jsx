@@ -4,8 +4,8 @@ const products = [
   {
     name: 'Nourish Facial Oil',
     badge: 'Best Seller',
-    price: '₹749',
-    oldPrice: '₹999',
+    price: '\u20B9749',
+    oldPrice: '\u20B9999',
     save: '25% OFF',
     image: '/images/product1.png',
     hoverImage: '/images/product2.png',
@@ -13,8 +13,8 @@ const products = [
   {
     name: 'Gentle Glow Cleanser',
     badge: 'New',
-    price: '₹599',
-    oldPrice: '₹799',
+    price: '\u20B9599',
+    oldPrice: '\u20B9799',
     save: '25% OFF',
     image: '/images/product1.png',
     hoverImage: '/images/product2.png',
@@ -22,8 +22,8 @@ const products = [
   {
     name: 'Radiance Clay Mask',
     badge: 'Ayurvedic',
-    price: '₹899',
-    oldPrice: '₹1199',
+    price: '\u20B9899',
+    oldPrice: '\u20B91199',
     save: '25% OFF',
     image: '/images/product1.png',
     hoverImage: '/images/product2.png',
@@ -31,13 +31,15 @@ const products = [
   {
     name: 'Renew Herbal Serum',
     badge: 'Trending',
-    price: '₹1099',
-    oldPrice: '₹1499',
+    price: '\u20B91099',
+    oldPrice: '\u20B91499',
     save: '27% OFF',
     image: '/images/product1.png',
     hoverImage: '/images/product2.png',
   },
 ];
+
+const carouselProducts = [...products, ...products];
 
 const press = ['Vogue', 'Goop', 'Bazaar', 'Well+Good', 'The Franklin Journal'];
 
@@ -52,28 +54,34 @@ export default function BestSellersSection() {
           </div>
 
           <div className="best-sellers-products">
-            {products.map((product) => (
-              <article className="best-seller-card" key={product.name}>
-                <a className="best-seller-product-link" href="#" aria-label={`View ${product.name}`}>
-                  <span className="best-seller-image">
-                    <span className="best-seller-photo primary" style={{ backgroundImage: `url('${product.image}')` }} />
-                    <span className="best-seller-photo hover" style={{ backgroundImage: `url('${product.hoverImage}')` }} />
-                    <span className="best-seller-badge">{product.badge}</span>
-                  </span>
-                  <span className="best-seller-meta">
-                    <strong>{product.name}</strong>
-                    <span className="best-seller-prices">
-                      <span className="best-seller-price-new">{product.price}</span>
+            <div className="best-sellers-products-track">
+              {carouselProducts.map((product, index) => (
+                <article className="best-seller-card" key={`${product.name}-${index}`} aria-hidden={index >= products.length}>
+                  <a className="best-seller-product-link" href="#" aria-label={`View ${product.name}`}>
+                    <span className="best-seller-image">
+                      <span className="best-seller-photo primary" style={{ backgroundImage: `url('${product.image}')` }} />
+                      <span className="best-seller-photo hover" style={{ backgroundImage: `url('${product.hoverImage}')` }} />
+                      <span className="best-seller-badge">{product.badge}</span>
                     </span>
-                  </span>
-                </a>
-                <button className="best-seller-cart" type="button" aria-label={`Add ${product.name} to cart`}>
-                  <ShoppingCart aria-hidden="true" />
-                  <span>Add to Cart</span>
-                </button>
-              </article>
-            ))}
+                    <span className="best-seller-meta">
+                      <strong>{product.name}</strong>
+                      <span className="best-seller-prices">
+                        <span className="best-seller-price-new">{product.price}</span>
+                      </span>
+                    </span>
+                  </a>
+                  <button className="best-seller-cart" type="button" aria-label={`Add ${product.name} to cart`}>
+                    <ShoppingCart aria-hidden="true" />
+                    <span>Add to Cart</span>
+                  </button>
+                </article>
+              ))}
+            </div>
           </div>
+
+          <a className="best-sellers-mobile-view-all" href="#">
+            View All <ArrowRight aria-hidden="true" />
+          </a>
         </div>
 
         <aside className="best-sellers-press" aria-label="Best sellers promotion">

@@ -4,6 +4,9 @@ import BenefitsSection from './components/BenefitsSection';
 import LuxuryCategorySection from './components/LuxuryCategorySection';
 import BestSellersSection from './components/BestSellersSection';
 import StoryVideoSection from './components/StoryVideoSection';
+import ProductShowcaseSection from './components/ProductShowcaseSection';
+import FooterSection from './components/FooterSection';
+
 
 export default function HomePage() {
   return (
@@ -15,7 +18,8 @@ export default function HomePage() {
         <LuxuryCategorySection />
         <BestSellersSection />
         <StoryVideoSection />
-        <BestSellersSection />
+        <ProductShowcaseSection />
+
       </main>
     </>
   );
