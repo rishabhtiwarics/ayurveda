@@ -1,4 +1,4 @@
-import { ArrowUpRight, Camera } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const galleryItems = [
   { title: 'Ayurveda Ritual', image: '/images/herobnner1.png' },
@@ -25,18 +25,9 @@ function InstagramBadge() {
 export default function InstagramSection() {
   return (
     <section className="instagram-section sf-white" aria-label="Follow Ayurveda on Instagram">
-      <div className="instagram-follow-panel">
-        <div className="instagram-follow-copy">
-          <span className="instagram-kicker">
-            <Camera aria-hidden="true" />
-            Follow us
-          </span>
-          <h2>Ayurveda moments, fresh from Instagram</h2>
-        </div>
-        <a className="instagram-follow-link" href="#" aria-label="Follow us on Instagram">
-          @ayurveda
-          <ArrowUpRight aria-hidden="true" />
-        </a>
+      <div className="instagram-follow-panel best-sellers-header">
+        <span>Follow Us On Instagram</span>
+        <a href="#" aria-label="Follow us on Instagram">@ayurveda <ArrowRight aria-hidden="true" /></a>
       </div>
 
       <div className="instagram-marquee" aria-hidden="true">

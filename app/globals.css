@@ -5684,12 +5684,28 @@ body{
 }
 
 @media (max-width:768px){
+  .footer-contact{display:none;}
   .footer-top{
     flex-direction:column;
-    align-items:flex-start;
+    align-items:center;
     gap:14px;
+    text-align:center;
     width:calc(100% - 32px);
   }
+  .footer-about{
+    align-items:center;
+    text-align:center;
+  }
+
+  .footer-about p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .footer-socials{
+    justify-content:center;
+  }
+
   .footer-card{
     width:calc(100% - 32px);
     grid-template-columns:1fr;
@@ -5913,6 +5929,34 @@ body{
 
 
 
+
+
+
+
+
+
+
+.instagram-follow-panel.best-sellers-header{
+  padding:12px 18px;
+  margin-bottom:16px;
+}
+
+.instagram-follow-panel.best-sellers-header span{
+  margin:0;
+}
+
+.instagram-follow-panel.best-sellers-header a{
+  white-space:nowrap;
+}
+
+@media (max-width:640px){
+  .instagram-follow-panel.best-sellers-header{
+  padding:12px 18px;
+    align-items:center;
+    flex-direction:row;
+    gap:12px;
+  }
+}
 
 
 
