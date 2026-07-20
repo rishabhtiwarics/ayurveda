@@ -6958,3 +6958,14 @@ body::-webkit-scrollbar{
   }
 }
 
+
+/* Instagram mobile: hide reverse row and slow visible marquee */
+@media (max-width:768px){
+  .instagram-marquee-reverse{
+    display:none !important;
+  }
+
+  .instagram-marquee:not(.instagram-marquee-reverse) .instagram-marquee-track{
+    animation-duration:240s !important;
+  }
+}
