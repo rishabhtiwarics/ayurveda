@@ -130,6 +130,16 @@ body{
   white-space:nowrap;
 }
 
+.brand-logo-image{
+  display:inline-block;
+  height:36px;
+  width:auto;
+}
+
+.footer-logo{
+  height:44px;
+}
+
 .brand-mark{
   display:inline-flex;
   align-items:center;
@@ -764,8 +774,8 @@ body{
     height:36px;
   }
   .hero{
-    width:calc(100% - 32px);
-    margin:0 16px;
+    width:calc(100% - 24px);
+    margin:0 12px;
   }
 
   .hero-container{
@@ -795,6 +805,7 @@ body{
   border-radius:10px 0 10px 0;
   border:1px solid rgba(55,68,49,0.14);
   background:#f5f1e8;
+  /* restored original: no extra inset on the grid */
 }
 
 .luxury-category-promise{
@@ -3526,7 +3537,6 @@ body{
 }
 
 /* Match homepage sections to HeroSection wrapper width */
-.benefits-section,
 .luxury-category-section,
 .best-sellers-section,
 .story-video-section,
@@ -3535,6 +3545,13 @@ body{
   width:calc(100% - 80px);
   margin-left:40px;
   margin-right:40px;
+  padding-left:0;
+  padding-right:0;
+}
+.benefits-section{
+  width:100%;
+  margin-left:0;
+  margin-right:0;
   padding-left:0;
   padding-right:0;
 }
@@ -3572,10 +3589,10 @@ body{
 .product-showcase-wrap{
   max-width:none;
   width:100%;
+  margin:0 auto;
 }
 
 @media (max-width:640px){
-  .benefits-section,
   .luxury-category-section,
   .best-sellers-section,
   .story-video-section,
@@ -3776,7 +3793,7 @@ body{
 
 @media (max-width:640px){
   .benefits-grid{
-    width:95%;
+    width:100%;
     grid-template-columns:repeat(2, minmax(0, 1fr));
   }
 }
@@ -3789,9 +3806,9 @@ body{
   .story-video-section,
   .product-showcase-section,
   .instagram-section{
-    width:calc(100% - 32px);
-    margin-left:16px;
-    margin-right:16px;
+    width:calc(100% - 28px);
+    margin-left:14px;
+    margin-right:14px;
     padding-left:0;
     padding-right:0;
   }

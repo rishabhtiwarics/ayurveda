@@ -14,9 +14,8 @@ export default function FooterSection() {
 
       {/* Row 1: Logo left, Collections right */}
       <div className="footer-top">
-        <Link href="/" className="brand-logo footer-brand" aria-label="AyurVeda home">
-          <span className="brand-mark"><Leaf aria-hidden="true" /></span>
-          <span>AyurVeda</span>
+        <Link href="/" className="brand-logo footer-brand" aria-label="pulp ayurveda home">
+          <img src="/images/logo.png" alt="pulp ayurveda" className="brand-logo-image footer-logo" />
         </Link>
 
         <nav className="footer-collections">
@@ -35,9 +34,8 @@ export default function FooterSection() {
       {/* White rounded card */}
       <div className="footer-card">
         <div className="footer-about">
-          <Link href="/" className="brand-logo footer-about-brand" aria-label="AyurVeda home">
-            <span className="brand-mark"><Leaf aria-hidden="true" /></span>
-            <span>AyurVeda</span>
+          <Link href="/" className="brand-logo footer-about-brand" aria-label="pulp ayurveda home">
+            <img src="/images/logo.png" alt="pulp ayurveda" className="brand-logo-image footer-logo" />
           </Link>
           <p>Rooted in Ayurveda, crafted with clean, natural ingredients to bring balance to your everyday skincare and wellness ritual.</p>
           <div className="footer-socials">
@@ -92,7 +90,7 @@ export default function FooterSection() {
 
       {/* Copyright, outside white card */}
       <div className="footer-copyright">
-        <p>© {new Date().getFullYear()} AyurVeda. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} pulp ayurveda. All rights reserved.</p>
       </div>
     </footer>
   );

@@ -36,9 +36,8 @@ export default function Header() {
       )}
 
       <div className="header-container">
-        <Link href="/" className="brand-logo" aria-label="AyurVeda home">
-          <span className="brand-mark"><Leaf aria-hidden="true" /></span>
-          <span>AyurVeda</span>
+        <Link href="/" className="brand-logo" aria-label="pulp ayurveda home">
+          <img src="/images/logo.png" alt="pulp ayurveda" className="brand-logo-image" />
         </Link>
 
         <nav className="header-nav" aria-label="Primary navigation">
