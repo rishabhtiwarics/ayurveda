@@ -11,7 +11,16 @@ const slides = [
     price: '\u20b9749',
     oldPrice: '\u20b9999',
     save: 'You Save 25%',
-    image: '/images/herobnner1.png',
+    image: '/images/herobnner3.jpeg',
+  },
+    {
+    badge: 'New Ayurveda Launch',
+    eyebrow: 'Herbal Daily Wellness',
+    title: 'AyurVeda Complete Wellness Care',
+    price: '\u20b9749',
+    oldPrice: '\u20b9999',
+    save: 'You Save 25%',
+    image: '/images/herobnner2.jpeg',
   }
 ];
 
