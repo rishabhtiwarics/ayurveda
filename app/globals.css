@@ -34,7 +34,7 @@ body{
   border-radius:10px 10px 10px 0;
   margin-bottom:10px;
   padding:9px 12px 9px 16px;
-  background-image:linear-gradient(90deg, rgba(43,54,37,0.94), rgba(55,68,49,0.78)), url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1600&q=80');
+  background-image:linear-gradient(90deg, rgba(43,54,37,0.94), rgba(55,68,49,0.78)), url('httdcps://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1600&q=80');
   background-size:cover;
   background-position:center;
   box-shadow:0 8px 24px rgba(43,54,37,0.12);
@@ -521,44 +521,10 @@ body{
   background:#ffffff;
 }
 
-.benefits-marquee{
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  opacity:.12;
-  pointer-events:none;
-}
 
-.benefits-marquee-track{
-  display:flex;
-  width:max-content;
-  animation:benefits-marquee-loop 26s linear infinite;
-  will-change:transform;
-  transform:translate3d(0,0,0);
-  backface-visibility:hidden;
-}
 
-.benefits-marquee-group{
-  display:flex;
-  flex-shrink:0;
-  gap:44px;
-  padding-right:44px;
-}
 
-.benefits-marquee-group span{
-  color:var(--green-dark);
-  font-size:46px;
-  font-weight:700;
-  line-height:1;
-  text-transform:uppercase;
-  white-space:nowrap;
-}
 
-@keyframes benefits-marquee-loop{
-  from{transform:translate3d(0,0,0);}
-  to{transform:translate3d(-50%,0,0);}
-}
 
 .benefits-grid{
   position:relative;
@@ -685,29 +651,6 @@ body{
   .benefits-section{
     padding:14px 16px 18px;
   }
-
-  .benefits-marquee-group span{
-    font-size:32px;
-  }
-
-  .benefits-grid{
-    grid-template-columns:repeat(2, minmax(0, 1fr));
-    max-width:100%;
-  }
-
-  .benefit-card{
-  display:flex;
-  flex-direction:row;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  min-height:54px;
-  padding:10px 14px;
-  color:#fff;
-  text-align:left;
-  background:transparent;
-  border-right:1px solid rgba(255,255,255,0.16);
-}
 
 .shop-concern{
     padding:6px 16px 36px;
@@ -5424,7 +5367,7 @@ body{
   }
 }
 
-/* ── Product Feature Badges ──────────────────────────────── */
+/* â”€â”€ Product Feature Badges â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .product-feature-badges{
   display:flex;
   align-items:center;
@@ -5511,7 +5454,7 @@ body{
   padding-bottom:28px;
 }
 
-/* Footer brand — reuses header's .brand-logo / .brand-mark, tinted for dark footer bg */
+/* Footer brand â€” reuses header's .brand-logo / .brand-mark, tinted for dark footer bg */
 .footer-top .brand-logo{
   color:#fff;
 }
@@ -6871,3 +6814,147 @@ body.sidebar-open .mobile-sidebar{
     animation-duration:235s !important;
   }
 }
+
+/* Instagram marquee live/mobile loop fix */
+.instagram-marquee-track{
+  display:flex;
+  width:max-content;
+  min-width:max-content;
+}
+
+.instagram-marquee-group{
+  flex:0 0 auto;
+  min-width:max-content;
+}
+
+@media (max-width:640px){
+  .instagram-marquee{
+    min-height:112px;
+  }
+
+  .instagram-marquee-track{
+    animation-duration:150s !important;
+  }
+
+  .instagram-marquee-reverse .instagram-marquee-track{
+    animation-duration:165s !important;
+  }
+
+  .instagram-tile{
+    flex-basis:132px;
+    min-width:132px;
+  }
+}
+
+/* Footer top collections centered */
+.footer-top{
+  justify-content:center;
+}
+
+.footer-collections{
+  justify-content:center;
+  flex-wrap:wrap;
+  width:100%;
+  max-width:980px;
+  margin:0 auto;
+}
+
+/* Hide footer collections below tablet */
+@media (max-width:767px){
+  .footer-collections{
+    display:none !important;
+  }
+}
+
+/* Remove footer top padding on mobile */
+@media (max-width:767px){
+  .site-footer{
+    padding-top:0 !important;
+  }
+}
+
+/* Announcement bar without background image */
+.announcement-bar{
+  background-image:linear-gradient(90deg, rgba(43,54,37,0.94), rgba(55,68,49,0.78)) !important;
+}
+
+/* Theme scroll progress indicator */
+.scroll-indicator{
+  position:fixed;
+  top:14px;
+  right:10px;
+  bottom:14px;
+  z-index:120;
+  width:6px;
+  overflow:hidden;
+  pointer-events:none;
+  background:rgba(246,248,242,0.68);
+  border:1px solid rgba(55,68,49,0.08);
+  border-radius:999px;
+  box-shadow:0 8px 24px rgba(43,54,37,0.08);
+}
+
+.scroll-indicator__thumb{
+  width:100%;
+  height:100%;
+  transform:scaleY(0);
+  transform-origin:top center;
+  background:linear-gradient(180deg, #98a871 0%, #536846 46%, var(--green-dark) 100%);
+  border-radius:999px;
+  transition:transform .08s linear;
+}
+
+@media (max-width:768px){
+  .scroll-indicator{
+    top:10px;
+    right:5px;
+    bottom:10px;
+    width:4px;
+    background:rgba(246,248,242,0.58);
+  }
+}
+
+/* Scroll indicator compact centered rail */
+.scroll-indicator{
+  top:50% !important;
+  bottom:auto !important;
+  height:min(46vh, 360px) !important;
+  transform:translateY(-50%);
+}
+
+@media (max-width:768px){
+  .scroll-indicator{
+    top:50% !important;
+    bottom:auto !important;
+    height:38vh !important;
+    transform:translateY(-50%);
+  }
+}
+
+/* Scroll indicator smaller on desktop */
+@media (min-width:769px){
+  .scroll-indicator{
+    height:min(32vh, 260px) !important;
+  }
+}
+
+/* Global scrollbar visibility fix */
+html,
+body{
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar{
+  width:0;
+  height:0;
+  display:none;
+}
+
+@media (max-width:768px){
+  .scroll-indicator{
+    display:none !important;
+  }
+}
+

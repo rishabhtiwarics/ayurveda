@@ -1,10 +1,15 @@
-import Link from 'next/link';
-import { Leaf, MapPin, Mail, Phone, ArrowRight } from 'lucide-react';
+﻿import Link from 'next/link';
+import { MapPin, Mail, Phone, ArrowRight } from 'lucide-react';
 
 const collections = [
-  { title: 'Face Care', href: '/collections/skincare', image: '/images/herobnner1.png' },
-  { title: 'Serums', href: '/collections/haircare', image: '/images/herobnner2.png' },
-  { title: 'Body Care', href: '/collections/wellness', image: '/images/herobnner1.png' },
+  { title: 'Virvex', href: '/collections/virvex', image: '/images/product1.png' },
+  { title: 'Venora', href: '/collections/venora', image: '/images/product2.png' },
+  { title: 'Pressova', href: '/collections/pressova', image: '/images/herobnner1.png' },
+  { title: 'Nestara', href: '/collections/nestara', image: '/images/herobnner2.png' },
+  { title: 'Livera', href: '/collections/livera', image: '/images/product1.png' },
+  { title: 'Flexora', href: '/collections/flexora', image: '/images/product2.png' },
+  { title: 'Femiva', href: '/collections/femiva', image: '/images/herobnner1.png' },
+  { title: 'Cardiva', href: '/collections/cardiva', image: '/images/herobnner2.png' },
 ];
 
 export default function FooterSection() {
@@ -12,12 +17,8 @@ export default function FooterSection() {
     <footer className="site-footer">
       <img className="footer-bg-leaf" src="/images/rightleaf.png" alt="" aria-hidden="true" />
 
-      {/* Row 1: Logo left, Collections right */}
+      {/* Row 1: Collections */}
       <div className="footer-top">
-        <Link href="/" className="brand-logo footer-brand" aria-label="pulp ayurveda home">
-          <img src="/images/logo.png" alt="pulp ayurveda" className="brand-logo-image footer-logo" />
-        </Link>
-
         <nav className="footer-collections">
           {collections.map((item) => (
             <a className="footer-collection-item" href={item.href} key={item.title}>
@@ -90,8 +91,9 @@ export default function FooterSection() {
 
       {/* Copyright, outside white card */}
       <div className="footer-copyright">
-        <p>© {new Date().getFullYear()} pulp ayurveda. All rights reserved.</p>
+        <p>Â© {new Date().getFullYear()} pulp ayurveda. All rights reserved.</p>
       </div>
     </footer>
   );
 }
+

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight, Leaf } from 'lucide-react';
@@ -45,14 +45,14 @@ export default function HeroSection() {
         {slides.map((item, index) => (
           <div
             className={`hero-slide-bg${index === activeSlide ? ' active' : ''}`}
-            key={item.title}
+            key={`${item.title}-${index}`}
             style={{ backgroundImage: `linear-gradient(0deg, rgb(6 15 4) 0%, rgb(6 15 4 / 37%) 24%, rgba(6, 15, 4, 0.16) 48%, rgba(6, 15, 4, 0) 72%), url('${item.image}')` }}
           />
         ))}
       </div>
 
       <div className="hero-container">
-        <div className="hero-content" key={slide.title}>
+        <div className="hero-content" key={`${slide.title}-${activeSlide}`}>
           <div className="offer-badge">
             <Leaf aria-hidden="true" />
             <span>{slide.badge}</span>

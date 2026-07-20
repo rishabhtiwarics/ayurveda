@@ -1,4 +1,5 @@
-import './globals.css';
+﻿import './globals.css';
+import ScrollProgressIndicator from './components/ScrollProgressIndicator';
 
 export const metadata = {
   title: 'AyurVeda | Pure Herbal Wellness',
@@ -7,8 +8,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning><ScrollProgressIndicator />{children}</body>
     </html>
   );
 }
+
+
