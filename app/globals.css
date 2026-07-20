@@ -6850,3 +6850,13 @@ body{
 .mobile-sidebar{
   border:0;
 }
+
+/* Lock background page while sidebar is open */
+body.sidebar-open{
+  overflow:hidden;
+  touch-action:none;
+}
+
+body.sidebar-open .mobile-sidebar{
+  position:fixed;
+}

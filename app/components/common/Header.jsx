@@ -63,6 +63,13 @@ export default function Header() {
     }
   }, []);
 
+  useEffect(() => {
+    document.body.classList.toggle('sidebar-open', menuOpen);
+
+    return () => {
+      document.body.classList.remove('sidebar-open');
+    };
+  }, [menuOpen]);
   const closeMenu = () => setMenuOpen(false);
 
   return (
@@ -205,3 +212,4 @@ export default function Header() {
     </header>
   );
 }
+
