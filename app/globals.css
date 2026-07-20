@@ -6860,3 +6860,14 @@ body.sidebar-open{
 body.sidebar-open .mobile-sidebar{
   position:fixed;
 }
+
+/* Instagram marquee slower on mobile */
+@media (max-width:640px){
+  .instagram-marquee-track{
+    animation-duration:220s !important;
+  }
+
+  .instagram-marquee-reverse .instagram-marquee-track{
+    animation-duration:235s !important;
+  }
+}
