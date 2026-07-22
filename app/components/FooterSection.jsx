@@ -2,14 +2,14 @@
 import { MapPin, Mail, Phone, ArrowRight } from 'lucide-react';
 
 const collections = [
-  { title: 'Virvex', href: '/collections/virvex', image: '/images/product1.png' },
-  { title: 'Venora', href: '/collections/venora', image: '/images/product2.png' },
-  { title: 'Pressova', href: '/collections/pressova', image: '/images/herobnner1.png' },
-  { title: 'Nestara', href: '/collections/nestara', image: '/images/herobnner2.png' },
-  { title: 'Livera', href: '/collections/livera', image: '/images/product1.png' },
-  { title: 'Flexora', href: '/collections/flexora', image: '/images/product2.png' },
-  { title: 'Femiva', href: '/collections/femiva', image: '/images/herobnner1.png' },
-  { title: 'Cardiva', href: '/collections/cardiva', image: '/images/herobnner2.png' },
+  { title: 'Virvex', href: '/collections/virvex', image: '/images/WhatsApp Image 2026-07-20 at 6.11.31 PM (1).jpeg' },
+  { title: 'Venora', href: '/collections/venora', image: '/images/WhatsApp Image 2026-07-20 at 6.11.31 PM.jpeg' },
+  { title: 'Pressova', href: '/collections/pressova', image: '/images/WhatsApp Image 2026-07-20 at 6.14.44 PM.jpeg' },
+  { title: 'Nestara', href: '/collections/nestara', image: '/images/WhatsApp Image 2026-07-20 at 6.11.31 PM (1).jpeg' },
+  { title: 'Livera', href: '/collections/livera', image: '/images/WhatsApp Image 2026-07-20 at 6.11.31 PM.jpeg' },
+  { title: 'Flexora', href: '/collections/flexora', image: '/images/WhatsApp Image 2026-07-20 at 6.14.44 PM.jpeg' },
+  { title: 'Femiva', href: '/collections/femiva', image: '/images/WhatsApp Image 2026-07-20 at 6.11.31 PM (1).jpeg' },
+  { title: 'Cardiva', href: '/collections/cardiva', image: '/images/WhatsApp Image 2026-07-20 at 6.11.31 PM.jpeg' },
 ];
 
 export default function FooterSection() {
@@ -96,4 +96,5 @@ export default function FooterSection() {
     </footer>
   );
 }
+
 

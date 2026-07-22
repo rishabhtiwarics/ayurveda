@@ -26,14 +26,14 @@ const navLinks = [
 ];
 
 const shopCategories = [
-  { title: 'Virvex', image: '/images/product1.png' },
-  { title: 'Venora', image: '/images/product2.png' },
-  { title: 'Pressova', image: '/images/herobnner1.png' },
-  { title: 'Nestara', image: '/images/herobnner2.png' },
-  { title: 'Livera', image: '/images/product1.png' },
-  { title: 'Flexora', image: '/images/product2.png' },
-  { title: 'Femiva', image: '/images/herobnner1.png' },
-  { title: 'Cardiva', image: '/images/herobnner2.png' },
+  { title: 'Virvex', image: '/images/WhatsApp Image 2026-07-20 at 6.11.31 PM (1).jpeg' },
+  { title: 'Venora', image: '/images/WhatsApp Image 2026-07-20 at 6.11.31 PM.jpeg' },
+  { title: 'Pressova', image: '/images/WhatsApp Image 2026-07-20 at 6.14.44 PM.jpeg' },
+  { title: 'Nestara', image: '/images/WhatsApp Image 2026-07-20 at 6.11.31 PM (1).jpeg' },
+  { title: 'Livera', image: '/images/WhatsApp Image 2026-07-20 at 6.11.31 PM.jpeg' },
+  { title: 'Flexora', image: '/images/WhatsApp Image 2026-07-20 at 6.14.44 PM.jpeg' },
+  { title: 'Femiva', image: '/images/WhatsApp Image 2026-07-20 at 6.11.31 PM (1).jpeg' },
+  { title: 'Cardiva', image: '/images/WhatsApp Image 2026-07-20 at 6.11.31 PM.jpeg' },
 ];
 
 const defaultUser = {
@@ -212,4 +212,5 @@ export default function Header() {
     </header>
   );
 }
+
 
